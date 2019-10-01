@@ -3,6 +3,10 @@
 {% block mycontent %}
 
   {%  load crispy_forms_tags %}
-  {{ form|crispy }}
 
+  <form method="post" novalidate>
+      {% csrf_token%}
+  {{ form|crispy }}
+  <button type="submit" class="btn btn_success">save faculty</button>
+</form>
 {% endblock %}
